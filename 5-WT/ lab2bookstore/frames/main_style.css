@@ -1,0 +1,372 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+/* navbar */
+.navbar {
+    padding-top: 10px;
+    overflow: hidden;
+    z-index: 999;
+    width: 100%;
+    height: 50px;
+    background-color: whitesmoke;
+}
+
+.icon {
+    width: 200px;
+    float: left;
+}
+
+.logo {
+    color: #ff7200;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 20px;
+    float: left;
+}
+
+.menu {
+    width: 60%;
+    float: left;
+}
+
+ul {
+    /* float: left; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul li {
+    list-style: none;
+
+    margin-left: 62px;
+    font-size: 16px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+}
+
+ul li a:hover {
+    color: #ff7200;
+}
+
+
+/* -----------home page----------- */
+.home {
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+} 
+
+.home {
+    background: url(/images/bg3.jpg) no-repeat center ;
+    width: 100%;
+    background-size: cover;
+}
+.content{
+    width: 100%;
+    /* height: auto; */
+    margin: auto;
+    /* position: relative; */
+
+    text-align: center;
+
+}
+.content h3{
+    color: #ff7200;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    padding-left: 25px;
+    padding-bottom: 20px;
+    padding-top: 18px;
+}
+.content h1{
+    color: #000;
+    font-size: 90px;
+    font-family:Arial, Helvetica, sans-serif;
+    padding-left: 20px;
+    padding-bottom: 25px;
+    letter-spacing:12.5px;
+    line-height: 100px;
+    
+}
+.content span{
+    color: #ff7200;
+    letter-spacing: 1px;
+}
+.content .paragraph{
+    /* padding-left: 20px; */
+    padding-bottom: 25px;
+    padding-top: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 1px;
+    line-height: 30px;
+    color: #000;
+    font-size: px;
+    padding-bottom: 50px;
+}
+
+.content .cn{
+    width: 160px;
+    height: 40px;
+    background: #ff7200;
+    border: #ff7200;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.content .cn a{
+    text-decoration: none;
+    color: #fff;
+}
+.cn a:hover{
+    color: #ff7200;
+}
+.cn:hover{
+    background-color:#fff ;
+    transition: 0.3s ease;
+}
+.pointer .cn{
+    margin-top: 20px;
+    background: transparent;
+    float: right;
+    margin-right: 50px;
+}
+.pointer .cn a{
+    color:#ff7200;
+}
+/* --------------------------about us -------------------- */
+.about {
+
+    padding-top: 100px;
+    display: flex;
+    height: 600px;
+
+}
+.about .title{
+    max-width: 800px;
+    /* padding-left: 20px; */
+    
+}
+
+.title h1{
+    color: #ff7200;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    letter-spacing: 5px;
+}
+.about .title p{
+    padding: 16px;
+    text-align: justify;
+    color: #000;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+/* shop page */
+
+.shop{
+    background-color: whitesmoke;
+    margin: auto;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    
+}
+
+.shop .title h1{
+    padding-top: 100px;
+    text-align: center; 
+    padding-bottom: 50px;
+}
+.cardcont{
+    margin-left: 16px;
+}
+
+.cards{
+    text-align: center;
+    display: inline-block;
+    margin: 10px;
+    width: 30%;
+    height: 300px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px gray;
+}
+.cards:hover{
+    box-shadow: 2px 2px 5px #ff7200;
+}
+.image img{
+    padding-top: 10px;
+    width: 90%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px; 
+
+}
+.title2{
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 5px;
+    text-align: center;
+}
+.des{
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    padding-top: 5px;
+    text-align: center;
+}
+.shop button{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #ff7200;
+    border: 1px solid #ff7200;
+    border-radius: 5px;
+    color: #fff;
+    padding: 3px;
+    
+}
+.shop button:hover{
+    background-color: transparent;
+    color: #ff7200;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.shop .shopmore button{
+    float: right;
+    margin: 16px;
+}
+/* -------------------------contact section------- */
+.contact{
+    height:700px;
+    position: relative;
+    padding: 16px 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.contact .title h1{
+    margin-top: 50px;
+    
+}
+.contact .title p{
+
+        padding: 20px;
+        text-align: center;
+        color: #000;
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        
+    
+}
+
+.contact .info{
+    max-width: 800px;
+    text-align: center;
+}
+.container1{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.container1 .contactInfo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.container1 .contactInfo .box{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+.container1 .contactInfo .box .icons{
+    min-width: 60px;
+    height: 60px;
+    background: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 20px;
+}
+.container1 .contactInfo .box .text {
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #000;
+    flex-direction: column;
+    font-weight: 300;
+}
+.container1 .contactInfo .box h3{
+    font-weight: 500;
+    color: #ff7200;
+}
+.contactform{
+    width: 40%;
+    padding: 40px;
+    background: #fff;
+}
+.contactform h2{
+    font-size: 30px;
+    color: #ff7200;
+    font-weight: 500;
+}
+.contactform .inputbox{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+.contactform .inputbox input,
+.contactform .inputbox textarea{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #000;
+    resize: none;
+    outline: none;
+}
+.contactform .inputbox span{
+    position:absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.3s;
+    color: #000;
+}
+.contactform .inputbox input:focus ~ span,
+.contactform .inputbox input:valid~span ,
+.contactform .inputbox textarea:focus ~ span,
+.contactform .inputbox textarea:valid~span {
+    color: #000;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+.contactform .inputbox input[type="submit"]{
+    width: 100px;
+    background: #ff7200;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+}

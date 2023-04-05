@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Number to Words Converter</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 10px;
+      }
+
+      h1 {
+        margin-top: 0;
+      }
+
+      form {
+        margin-bottom: 20px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      input[type="text"] {
+        padding: 5px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        width: 200px;
+        box-sizing: border-box;
+      }
+
+      #result {
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Number to Words Converter</h1>
+    <form>
+      <label for="number">Enter a number (0-999):</label>
+      <input
+        type="text"
+        id="number"
+        name="number"
+        oninput="convertNumberToWords()"
+      />
+    </form>
+    <p id="result"></p>
+
+    <script>
+      function convertNumberToWords() {
+        const numberInput = document.getElementById("number");
+        const result = document.getElementById("result");
+        const number = parseInt(numberInput.value);
+
+        // Check if the input is a valid number
+        if (isNaN(number) || number < 0 || number > 999) {
+          result.textContent =
+            "Invalid input. Please enter a number between 0 and 999.";
+          return;
+        }
+
+        // Convert the number to words
+        const ones = [
+          "zero",
+          "one",
+          "two",
+          "three",
+          "four",
+          "five",
+          "six",
+          "seven",
+          "eight",
+          "nine",
+        ];
+        const tens = [
+          "",
+          "ten",
+          "twenty",
+          "thirty",
+          "forty",
+          "fifty",
+          "sixty",
+          "seventy",
+          "eighty",
+          "ninety",
+        ];
+        const teens = [
+          "eleven",
+          "twelve",
+          "thirteen",
+          "fourteen",
+          "fifteen",
+          "sixteen",
+          "seventeen",
+          "eighteen",
+          "nineteen",
+        ];
+
+        let words = "";
+        if (number === 0) {
+          words = ones[0];
+        } else if (number < 10) {
+          words = ones[number];
+        } else if (number < 20) {
+          words = teens[number - 11];
+        } else if (number < 100) {
+          words = tens[Math.floor(number / 10)] + " " + ones[number % 10];
+        } else {
+          words = ones[Math.floor(number / 100)] + " hundred ";
+          if (number % 100 === 0) {
+            words = words.trim();
+          } else if (number % 100 < 10) {
+            words += "and " + ones[number % 100];
+          } else if (number % 100 < 20) {
+            words += "and " + teens[(number % 100) - 11];
+          } else {
+            words +=
+              "and " +
+              tens[Math.floor((number % 100) / 10)] +
+              " " +
+              ones[number % 10];
+          }
+        }
+
+        result.textContent = words;
+      }
+    </script>
+  </body>
+</html>

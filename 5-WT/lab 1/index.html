@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Form with JS</title>
+    <style>
+      * {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      form {
+        background-color: whitesmoke;
+        width: 300px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 5px 5px 10px #ccc;
+      }
+
+      label {
+        font-weight: 300;
+        margin: 5px;
+      }
+
+      input[type="text"],
+      input[type="password"] {
+        width: 100%;
+        padding: 12px 20px;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      button {
+        border: black;
+        width: 100%;
+        background-color: gray;
+        color: white;
+        padding: 14px 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #ff7200;
+        cursor: pointer;
+        color: #ffffff;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <h2>Form Example Lab 1</h2>
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required />
+      <br />
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required />
+      <br />
+      <label for="education">Education:</label>
+      <br />
+      <input type="checkbox" id="math" name="education[]" value="math" />
+      <label for="math">Math</label>
+      <br />
+      <input type="checkbox" id="science" name="education[]" value="science" />
+      <label for="science">Science</label>
+      <br />
+      <input type="checkbox" id="english" name="education[]" value="english" />
+      <label for="english">English</label>
+      <br />
+      <button onclick="validateForm()">Submit</button>
+    </form>
+    <script>
+      function validateForm() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        var education = document.getElementsByName("education[]");
+
+        if (username.length < 4) {
+          alert("Username must be at least 4 characters long.");
+          return false;
+        }
+
+        if (!/^[0-9]/.test(password) || !/[#]$/.test(password)) {
+          alert("Password must start with a digit and end with #.");
+          return false;
+        }
+        var check = false;
+        for (var i = 0; i < education.length; i++) {
+          if (education[i].checked) {
+            check = true;
+          }
+        }
+        if (!check) {
+          alert("Please select at least one education field.");
+          return false;
+        }
+        return alert("Successful!");
+      }
+    </script>
+  </body>
+</html>

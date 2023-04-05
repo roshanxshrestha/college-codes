@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 5 Pop up boxes and functions</title>
+    <style>
+      form {
+        background-color: whitesmoke;
+        width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 5px 5px 10px #ccc;
+      }
+      button {
+        margin: 10px;
+        background-color: whitesmoke;
+        color: black;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      input {
+        padding: 5px 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <h2>Lab 5 Pop up boxes and functions</h2>
+      <button onclick="displayDate()">Display Date</button>
+      <input type="text" id="date-textbox" />
+      <br />
+      <button onclick="factorial()">Find Factorial</button>
+      <br />
+      <button onclick="multiplicationTable()">Multiplication Table</button>
+      <br />
+      <button onclick="sumOfNumbers()">Addition</button>
+    </form>
+    <script>
+      function displayDate() {
+        var today = new Date();
+        var date =
+          today.getFullYear() +
+          "-" +
+          (today.getMonth() + 1) +
+          "-" +
+          today.getDate();
+        document.getElementById("date-textbox").value = date;
+      }
+      function factorial() {
+        var n = prompt("Enter a number:");
+        var fact = 1;
+        for (var i = 1; i <= n; i++) {
+          fact = fact * i;
+        }
+        alert("The factorial of " + n + " is " + fact);
+      }
+      function multiplicationTable() {
+        var n = prompt("Enter a number:");
+        var table = "";
+        for (var i = 1; i <= 10; i++) {
+          table += n + " x " + i + " = " + n * i + "\n";
+        }
+        alert(table);
+      }
+      function sumOfNumbers() {
+        var num = parseInt(prompt("Enter a number to add:"));
+        var sum = num;
+        while (confirm("Do you want to add another number?")) {
+          num = parseInt(prompt("Enter another number to add:"));
+          sum += num;
+        }
+        alert("Sum of numbers: " + sum);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<users>
+  <user>
+    <id>1</id>
+    <name>John Doe</name>
+    <email>john.doe@example.com</email>
+  </user>
+  <user>
+    <id>2</id>
+    <name>Jane Smith</name>
+    <email>jane.smith@example.com</email>
+  </user>
+  <user>
+    <id>3</id>
+    <name>Bob Johnson</name>
+    <email>bob.johnson@example.com</email>
+  </user>
+  <user>
+    <id>4</id>
+    <name>Alice Williams</name>
+    <email>alice.williams@example.com</email>
+  </user>
+  <user>
+    <id>5</id>
+    <name>Tom Jones</name>
+    <email>tom.jones@example.com</email>
+  </user>
+  <user>
+    <id>6</id>
+    <name>Sara Davis</name>
+    <email>sara.davis@example.com</email>
+  </user>
+  <user>
+    <id>7</id>
+    <name>Jack Brown</name>
+    <email>jack.brown@example.com</email>
+  </user>
+  <user>
+    <id>8</id>
+    <name>Emily Lee</name>
+    <email>emily.lee@example.com</email>
+  </user>
+  <user>
+    <id>9</id>
+    <name>Mark Garcia</name>
+    <email>mark.garcia@example.com</email>
+  </user>
+  <user>
+    <id>10</id>
+    <name>Kate Nguyen</name>
+    <email>kate.nguyen@example.com</email>
+  </user>
+</users>

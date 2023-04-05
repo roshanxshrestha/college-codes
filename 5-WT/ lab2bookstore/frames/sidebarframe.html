@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/index.css" />
+    <title>Document</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        transition: all 0.15s ease;
+    }
+
+    ul {
+        margin-top: 2rem;
+        width: 100%;
+        /* height: 100vh; */
+    }
+
+    li {
+        cursor: context-menu;
+        position: relative;
+        font-family: 'Josefin Sans', sans-serif;
+        letter-spacing: 1px;
+        padding: 0.5em;
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+    li.active {
+        font-weight: 700;
+    }
+
+    li:hover:not(.active) {
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    li.active::before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-color: #ff7200;
+    }
+    .search{
+    width: 90%;
+    padding-left: 16px;
+    display: flex;
+}
+.srch{
+    
+    font-family: "Arial";
+    width: 60%;
+    height: 40px;
+    background: transparent;
+    border: 1px solid #ff7200;
+    margin-top: 13px;
+    color: #000;
+    border-right: none;
+    font-size: 16px;
+    float: left;
+    padding: 10px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+
+}
+.btn{
+    width: 200%;
+    height: 40px;
+    /* padding-right: 16px; */
+    background: #ff7200;
+    border: 2px solid #ff7200;
+    margin-top: 13px;
+    color: #fff;
+    font-size: 15px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    cursor: pointer;
+}
+.btn:focus{
+    outline: none;
+}
+
+.srch:focus{
+    outline: none;
+}
+</style>
+
+<body>
+    <div class="search">
+        <input type="search" class="srch" name="" placeholder="Search Books">
+        <a href="#"><button class="btn">Search</button></a>
+    </div>
+    <ul>
+        <li class="active">Random Selection</li>
+        <li>Adventure</li>
+        <li>Biography</li>
+        <li>Classic</li>
+        <li>Philosophy</li>
+        <li>Thriller</li>
+        <li>History</li>
+        <li>Science Fiction</li>
+    </ul>
+</body>
+
+</html>

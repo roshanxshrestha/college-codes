@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        padding: 50px;
+        background-color: #f5f5dc;
+        font-family: Arial, sans-serif;
+      }
+
+      /* Style the selection box */
+      #countries {
+        font-size: 18px;
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        box-shadow: 2px 2px 4px #888888;
+      }
+
+      /* Style the text displaying the capital */
+      #capital {
+        color: #00008b;
+        font-weight: bold;
+        font-size: 22px;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <select id="countries" onchange="displayCapital()">
+      <option value="">Select a country</option>
+      <option value="Nepal">Nepal</option>
+      <option value="United States">United States</option>
+      <option value="China">China</option>
+      <option value="Russia">Russia</option>
+      <option value="Brazil">Brazil</option>
+    </select>
+    <br />
+    <p id="capital"></p>
+
+    <script>
+      // Function to display capital of selected country
+      function displayCapital() {
+        var country = document.getElementById("countries").value;
+        var capital;
+        switch (country) {
+          case "Nepal":
+            capital = "Kathmandu";
+            break;
+          case "United States":
+            capital = "Washington D.C.";
+            break;
+          case "China":
+            capital = "Beijing";
+            break;
+          case "Russia":
+            capital = "Moscow";
+            break;
+          case "Brazil":
+            capital = "Brasília";
+            break;
+          default:
+            capital = "";
+        }
+        document.getElementById("capital").innerHTML =
+          "The capital city of " + country + " is " + capital;
+      }
+    </script>
+  </body>
+</html>

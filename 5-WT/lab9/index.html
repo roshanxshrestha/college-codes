@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>jQuery Hide and Show Example</title>
+    <style>
+      #element-to-hide {
+        background-color: #eee;
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin-bottom: 20px;
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // hide the element when the page loads
+        $("#element-to-hide").hide();
+
+        // show the element when the "Show Element" button is clicked
+        $("#show-btn").click(function () {
+          $("#element-to-hide").show();
+        });
+
+        // hide the element when the "Hide Element" button is clicked
+        $("#hide-btn").click(function () {
+          $("#element-to-hide").hide();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>jQuery Hide and Show Example</h1>
+    <button id="hide-btn">Hide Element</button>
+    <button id="show-btn">Show Element</button>
+    <div id="element-to-hide">This is the element to hide</div>
+  </body>
+</html>
